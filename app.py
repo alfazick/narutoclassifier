@@ -34,7 +34,9 @@ def home():
 def classify_image():
     # Get the image from the POST request
     uploaded_image = request.files['image']
-    img = load_img(uploaded_image, target_size=(224, 224))  # Adjust target size based on your model's input size
+    
+    # Convert the uploaded image directly to an image array
+    img = load_img(uploaded_image.stream, target_size=(224, 224))
     img_array = img_to_array(img) / 255.  # Ensure to rescale as you did during training
     img_array = np.expand_dims(img_array, axis=0)
 
@@ -44,9 +46,8 @@ def classify_image():
 
     # Get the corresponding class label
     predicted_class = classes[predictions[0]]
-    image_url = url_for('static', filename=f'{predicted_class.lower()}.jpg')
 
-    return render_template('result.html', image_url=image_url, label=predicted_class)
+    return render_template('result.html', label=predicted_class)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)

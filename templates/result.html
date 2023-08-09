@@ -2,23 +2,10 @@
 <html>
 <head>
     <title>Classification Result</title>
-    <title>Model Prediction</title>
-    <style>
-        .image-container {
-            width: 300px;
-            height: 200px;
-            overflow: hidden;
-        }
-        .image-container img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-    </style>
 </head>
 <body>
     <h2>Classification Result</h2>
     <p>Predicted Class: {{ label }}</p>
-    <img src="{{ image_url }}" alt="Predicted Class Image">
     <br>
     <a href="/">Upload another image</a>
 </body>
