@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'narutoclassifier'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A301503F40BA4F0FADFBC2EEAC1A2E6A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A7429FE4A01F448C855C024DCDB964D3 }}
