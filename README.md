@@ -1,5 +1,45 @@
 # deploymlmodel
 Instructions to deploy trained model(tensorflow)
+
+Instructions for Git
+
+0) Suppress local GIT -> command is provided by Azure
+Command will start like that
+git config --global --add .....
+
+1) Set your Git Credentils
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+				repotoclone ->>>>>>>				   newfoldername
+git clone https://github.com/alfazick/classifiermodel computervision
+
+Navigate to Your Cloned Repository:
+cd path_to_cloned_repository
+
+Remove the Old .git Directory:
+rm -rf .git
+
+Initialize a New Git Repository:
+
+git init
+Add All Files and Commit:
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/alfazick/narutoclassifier.git
+Push to Your Fresh GitHub Repository:
+
+Assuming the default branch for your new repository is main:
+After executing these commands, your local repository's content should be in your new GitHub repository "narutoclassifier".
+
+
+Navigate to Your Repository (if not already there):
+cd path_to_cloned_repository
+This step ensures that your local branch is named main:
+git branch -M main
+git push -u origin main
+
  Block # 1) App Service Plan and App Service
 
 Create an App Service Plan
