@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Classification Result</title>
     <title>Model Prediction</title>
     <style>
         .image-container {
@@ -15,13 +16,10 @@
     </style>
 </head>
 <body>
-    <h1>Here's Your Image:</h1>
-    <div class="image-container">
-        <img src="{{ image_url }}" alt="Penguin Image">
-    </div>
-
-    <p>Species identified: <strong>{{ species }}</strong></p>
+    <h2>Classification Result</h2>
+    <p>Predicted Class: {{ label }}</p>
+    <img src="{{ image_url }}" alt="Predicted Class Image">
     <br>
-    <a href="/">Go Back</a>
+    <a href="/">Upload another image</a>
 </body>
 </html>
